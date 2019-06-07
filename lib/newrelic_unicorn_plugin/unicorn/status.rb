@@ -2,8 +2,8 @@ module NewRelic::Plugin::Unicorn
   module Status
     attr_reader :pid_file
 
-    def initialize(rails_root, pid_name)
-      @pid_file = "#{rails_root}/tmp/pids/#{pid_name}"
+    def initialize(pid_name)
+      @pid_file = "#{pid_dir}/#{pid_name}"
     end
 
     private
